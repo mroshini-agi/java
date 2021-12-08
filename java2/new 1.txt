@@ -1,0 +1,289 @@
+package myfirst;
+
+import java.util.ArrayList;
+
+public class demo {
+	public static void main(String aa[]) {
+	//arrayList String	
+		ArrayList<String> list= new ArrayList <>();
+		list.add("html");
+		list.add("css");
+		list.add("angular");
+		list.add("java");
+		
+		for(String x :list) {
+			System.out.println(x);
+		}
+//   integer
+		ArrayList<Integer> lis=new ArrayList<>();//Object
+        lis.add(567);
+        lis.add(67890);
+        lis.add(14);
+
+        for(int  a  : lis)
+        {
+        System.out.println(a);    
+        }
+        
+//    
+        
+	}
+
+}
+-----------------------
+
+package myfirst;
+
+import java.util.ArrayList;
+
+public class emp {
+	public static void main(String aa[]) 
+    {
+//    Object //parent of all the classes
+
+
+
+        ArrayList<Employee> list=new ArrayList<>();//Object
+
+        Employee e1=new Employee("roshini", "12");
+        Employee e2=new Employee("xyz", "13");
+        list.add(e1);
+        list.add(e2);
+        list.add(new Employee("abc","1234"));
+
+        for(Employee  x  : list)
+        {
+        System.out.println(x);    
+        }
+
+    }
+}
+ 
+class Employee
+{
+    String name,id;
+ 
+    public Employee(String name, String id) {
+        super();
+        this.name = name;
+        this.id = id;
+    }
+ 
+    public String getName() {
+        return name;
+    }
+ 
+    public void setName(String name) {
+        this.name = name;
+    }
+ 
+    public String getId() {
+        return id;
+    }
+ 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String toString()
+    {
+    return "Name :"+name+"\nId  :"+id;
+
+    }
+}
+
+-------------------------------
+
+import java.util.ArrayList;
+import java.util.Scanner;
+ 
+public class demoo {
+    public static void main(String aa[]) 
+    {
+//    Object //parent of all the classes
+        ArrayList<Studentt> list=new ArrayList<>();//Object
+        Studentt s1=new Studentt("sakshi", "Present");
+        Studentt s2=new Studentt("xyz", "Present");
+        Studentt s3=new Studentt("abc", "Present");    
+        Studentt s4=new Studentt("xy", "Present");
+
+          list.add(s1);
+          list.add(s2);
+          list.add(s3);
+          list.add(s4);
+          for( Studentt s:list)
+          {
+              System.out.println(s.name+"  "+s.attendence);
+          }
+}
+ 
+}
+ 
+class Studentt
+{
+    String name;
+    String attendence;
+    public Studentt(String name, String attendence) {
+        super();
+        this.name = name;
+        this.attendence = attendence;
+    }    
+}
+
+---------------------------------------------
+
+package demo;
+import java.util.*;public class Pattern {
+public static void main(String args[]) {
+//2.student marks
+System.out.println("book id price author\n");
+ArrayList<Books> list=new ArrayList<>();//Object
+Books b1=new Books("The overstory", 4, 380, "Richard");
+list.add(b1);
+for( Books b:list)
+{
+System.out.println(b.bname+" "+b.id+" "+b.price+" "+b.author);
+}
+}
+}
+class Books{
+String bname;
+int id;
+int price;
+String author;
+public Books(String bname, int id,int price, String author) {
+this.bname=bname;
+this.id=id;
+this.price=price;
+this.author=author;
+}
+}
+----------------------
+package demo;
+import java.util.*;public class demo {
+public static void main(String args[]) {
+//1.language marks
+System.out.println("Language Marks\n");
+ArrayList<Language> list=new ArrayList<>();//Object
+Language l1=new Language(" Java ", 9);
+Language l2=new Language(" Android ",9);
+Language l3=new Language(" C ", 10);
+list.add(l1);
+list.add(l2);
+list.add(l3);
+for( Language l:list)
+{
+System.out.println(l.subject+" "+l.mark);
+}
+}
+}
+class Language{
+String subject;
+int mark;
+public Language(String subject, int mark) {
+this.subject=subject;
+this.mark=mark;
+}
+}
+-----------
+package demo;
+import java.util.*;public class Task {
+public static void main(String args[]) {
+//2.student marks
+System.out.println("Student Mark1 Mark2 Mark3\n");
+ArrayList<Studentt> list=new ArrayList<>();//Object
+Studentt s1=new Studentt(" varsha", 400, 380, 480);
+list.add(s1);
+for( Studentt s:list)
+{
+System.out.println(s.name+" "+s.mark1+" "+s.mark2+" "+s.mark3);
+}
+}
+}
+class Studentt{
+String name;
+int mark1;
+int mark2;
+int mark3;
+public Studentt(String name, int mark1,int mark2, int mark3) {
+this.name=name;
+this.mark1=mark1;
+this.mark2=mark2;
+this.mark3=mark3;
+}
+}
+
+--------------------------------------
+
+package myfirst;
+import java.util.ArrayList;
+public class method {
+//	isEmpty()
+	    public static void main(String[] args) 
+	    {
+	        ArrayList<Integer> listOfNumbers = new ArrayList<Integer>();
+	        listOfNumbers.add(1);
+	        listOfNumbers.add(2);
+	        listOfNumbers.add(3);
+	        listOfNumbers.add(4);
+	        listOfNumbers.add(5);
+	                
+	        System.out.println("Is empty: "+ listOfNumbers.isEmpty());
+	        
+	        ArrayList<Integer> listOfNumbers2 = new ArrayList<Integer>();
+	        
+	        System.out.println("Is empty: "+ listOfNumbers2.isEmpty());
+	       
+	        
+
+//	addAll()
+	    ArrayList<Integer> listOfNumbers3 = new ArrayList<Integer>();
+	        listOfNumbers3.addAll(listOfNumbers);
+
+	        System.out.println("Numbers: " +listOfNumbers3);
+	        
+//		  clear()
+	        listOfNumbers.clear();
+	        
+	        System.out.println("Is empty: "+ listOfNumbers.isEmpty());
+	    
+	    
+}
+}
+
+-------------------------------
+
+package myfirst;
+import java.util.ArrayList;
+public class methods {
+
+	    public static void main(String[] args){
+
+	       
+	        ArrayList<String> languages = new ArrayList<>();
+
+	      
+	        languages.add("Java");
+	        languages.add("JavaScript");
+	        languages.add("Python");
+	        System.out.println("Programming Languages: " + languages);
+
+
+	        
+//	 get()       
+	     // at index 1
+	        String element = languages.get(1);
+	        System.out.println("Element at index 1: " + element);
+	        
+//remove()
+	    
+	        String removedElement = languages.remove(2);
+
+	        System.out.println("Removed Element: " + removedElement);
+//	removeall()	        
+// remove all elements from arraylist
+	        languages.removeAll(languages);
+	        System.out.println("ArrayList after removeAll(): " + languages);
+	}
+
+}
